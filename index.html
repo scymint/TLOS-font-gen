@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tlos Font Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @font-face {
+            font-family: 'TlosTitle';
+            src: url('tlos_title_font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>The Legend of Spyro</h1>
+        <h2>Font Image Generator</h2>
+
+        <div class="controls">
+            <label>Text
+                <textarea id="text" rows="3" placeholder="Type your text here">The Legend of Spyro</textarea>
+            </label>
+
+            <label>Font size
+                <input id="size" type="range" min="24" max="300" value="72">
+            </label>
+
+            <label>Letter spacing (px)
+                <input id="letterSpacing" type="range" min="0" max="200" value="0">
+            </label>
+
+            <label>Stretch X (%)
+                <input id="stretchX" type="range" min="50" max="200" value="100">
+            </label>
+
+            <label>Text color
+                <select id="fillType">
+                    <option value="solid">Solid</option>
+                    <option value="linear">Linear gradient</option>
+                </select>
+                <input id="color" type="color" value="#000000">
+                <div id="textGradientControls" class="grad-controls hidden">
+                    <input id="color1" type="color" value="#000000">
+                    <input id="color2" type="color" value="#ff0000">
+                    <label>Angle <input id="angle" type="range" min="0" max="360" value="0"></label>
+                </div>
+            </label>
+
+            <label>Stretch Y (%)
+                <input id="stretchY" type="range" min="50" max="200" value="100">
+            </label>
+
+
+
+            <div class="buttons">
+                <button id="download">Download PNG</button>
+            </div>
+        </div>
+
+        <section class="preview">
+            <canvas id="canvas"></canvas>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <footer>
+        Created by Symint<br>Font Made by DragonOfIceAndFire
+        <div class="socials">
+            <a class="social-btn x" href="https://x.com/symit__" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>symit__</span>
+            </a>
+            <a class="social-btn bluesky" href="https://bsky.app/profile/symint.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M7 13c2-3 6-3 8 0 2 3 4 3 6 0" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                <span>symint.bsky.social</span>
+            </a>
+            <a class="social-btn github" href="https://github.com/scymint" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.416-4.042-1.416-.546-1.387-1.334-1.757-1.334-1.757-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.957-.266 1.98-.399 3-.405 1.02.006 2.043.139 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.648 1.653.243 2.873.12 3.176.77.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.429.37.81 1.096.81 2.21 0 1.596-.015 2.883-.015 3.276 0 .322.21.695.825.577C20.565 22.092 24 17.592 24 12.297 24 5.67 18.627.297 12 .297z"/></svg>
+                <span>scymint</span>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
