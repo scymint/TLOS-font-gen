@@ -17,14 +17,13 @@ body {
 }
 
 .container {
-    width: 1240px;
-    height: 800px;
+    max-width: 1240px;
+    width: calc(100% - 48px);
     margin: 28px auto;
     padding: 20px;
     background: #f6f7fb;
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(20, 30, 50, 0.08);
-    overflow: auto; /* allow internal scrolling without resizing page */
 }
 
 h1 {
@@ -123,7 +122,7 @@ canvas {
 footer {
     text-align: center;
     margin: 12px 0 8px;
-    color: #444;
+    color: #fff;
     font-size: 14px;
     flex-shrink: 0;
 }
